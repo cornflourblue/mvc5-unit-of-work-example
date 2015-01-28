@@ -1,0 +1,23 @@
+﻿@model UnitOfWorkExample.Web.Models.Home.IndexViewModel
+@using UnitOfWorkExample.Web.Helpers
+@{
+    ViewBag.Title = "MVC5 Unit of Work Example";
+}
+
+<div class="jumbotron">
+    <div class="container">
+        <h1>MVC5 Unit of Work Example</h1>
+    </div>
+</div>
+<div class="container">
+    <h2>Products</h2>
+    @if (Model.Products.AnySafe())
+    {
+        <ul>
+            @foreach (var product in Model.Products)
+            {
+                <li>@product.Name</li>
+            }
+        </ul>
+    }
+</div>

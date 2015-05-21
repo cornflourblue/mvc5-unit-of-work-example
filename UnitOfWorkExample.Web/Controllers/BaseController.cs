@@ -11,26 +11,19 @@ namespace UnitOfWorkExample.Web.Controllers
 {
     public class BaseController : Controller
     {
-        private bool _isChildAction;
-
         [Inject]
         public IUnitOfWork UnitOfWork { get; set; }
 
         protected override void OnActionExecuting(ActionExecutingContext filterContext)
         {
-            _isChildAction = filterContext.ActionDescriptor.GetCustomAttributes(typeof(ChildActionOnlyAttribute), false).Any();
-            if (!_isChildAction)
-            {
+            if (!filterContext.IsChildAction)
                 UnitOfWork.BeginTransaction();
-            }
         }
 
         protected override void OnResultExecuted(ResultExecutedContext filterContext)
         {
-            if (!_isChildAction)
-            {
+            if (!filterContext.IsChildAction)
                 UnitOfWork.Commit();
-            }
         }
     }
 }

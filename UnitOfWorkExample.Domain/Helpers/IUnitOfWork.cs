@@ -10,5 +10,6 @@ namespace UnitOfWorkExample.Domain.Helpers
     {
         void BeginTransaction();
         void Commit();
+        void Rollback();
     }
 }

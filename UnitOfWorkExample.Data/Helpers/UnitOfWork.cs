@@ -44,16 +44,32 @@ namespace UnitOfWorkExample.Data.Helpers
         {
             try
             {
-                _transaction.Commit();
+                if (_transaction != null && _transaction.IsActive)
+                    _transaction.Commit();
             }
             catch 
             {
-                _transaction.Rollback();
+                if (_transaction != null && _transaction.IsActive)
+                    _transaction.Rollback();
+
                 throw;
             }
             finally
             {
-                Session.Close();
+                Session.Dispose();
+            }
+        }
+
+        public void Rollback()
+        {
+            try
+            {
+                if (_transaction != null && _transaction.IsActive)
+                    _transaction.Rollback();
+            }
+            finally
+            {
+                Session.Dispose();
             }
         }
     }

@@ -1,13 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.31101.0
+# Visual Studio 14
+VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitOfWorkExample.Domain", "UnitOfWorkExample.Domain\UnitOfWorkExample.Domain.csproj", "{7E905B6F-E293-4ECE-8BC3-99404FCAB5C3}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitOfWorkExample.Web", "UnitOfWorkExample.Web\UnitOfWorkExample.Web.csproj", "{89BEA5D0-EEDF-4ED7-9D86-252CB1EF0D9C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitOfWorkExample.Data", "UnitOfWorkExample.Data\UnitOfWorkExample.Data.csproj", "{C8E50A39-AF3E-4E5F-B5C3-6CFAE1800251}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitOfWorkExample.WebApi", "UnitOfWorkExample.WebApi\UnitOfWorkExample.WebApi.csproj", "{B29EA202-0709-4FD7-BAF2-1E1352859CA0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{C8E50A39-AF3E-4E5F-B5C3-6CFAE1800251}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C8E50A39-AF3E-4E5F-B5C3-6CFAE1800251}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C8E50A39-AF3E-4E5F-B5C3-6CFAE1800251}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B29EA202-0709-4FD7-BAF2-1E1352859CA0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B29EA202-0709-4FD7-BAF2-1E1352859CA0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B29EA202-0709-4FD7-BAF2-1E1352859CA0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B29EA202-0709-4FD7-BAF2-1E1352859CA0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
